@@ -3,6 +3,56 @@
     <channel>
         <title>Atlas</title>
         <item>
+            <title>0.4.2</title>
+            <pubDate>Sun, 26 Jul 2026 09:13:56 -0500</pubDate>
+            <sparkle:version>294</sparkle:version>
+            <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<style>body{font:13px/1.5 -apple-system,system-ui,sans-serif;margin:0;color:#1d1d1f}h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#86868b;margin:14px 0 6px}ul{margin:0;padding-left:18px}li{margin:4px 0}code{font-family:ui-monospace,monospace;font-size:12px;background:#f2f2f7;padding:1px 4px;border-radius:4px}</style>
+<h3>Added</h3>
+<ul>
+  <li><strong>Turn off the floating formatting bar.</strong> <strong>Settings → General → Editing</strong> hides the bar that appears over a selection, for a quieter page. Keyboard shortcuts keep working either way. (Mac)</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+  <li><strong>Note previews show what a note is filed under.</strong> Hovering a <code>[[link]]</code> used to repeat the note's title along the bottom of the preview card. That row now lists the note's tags instead, with a count when there are more than fit. Notes without tags show when they were last edited. (Mac and iPad)</li>
+  <li><strong>Opening on iPhone or iPad after writing on your Mac is much faster.</strong> Lore used to wait on iCloud before it could show you anything, so a few new notes on the Mac could leave the phone sitting on "Opening your notes…" for several seconds. It now puts your notes on screen straight away and picks up the other device's changes in the background. Starting the day's daily note no longer holds up the launch either.</li>
+  <li><strong>Editing stays smooth in long notes.</strong> Typing now restyles just the paragraph you're working in rather than the whole document, and the note's structure is reused between keystrokes instead of rebuilt.</li>
+  <li><strong>Less happens in the background while you write.</strong> The context panel, All Notes previews, and the ⌘K palette no longer redo their work on every keystroke and every save, and finding Nearby Notes is substantially quicker.</li>
+  <li><strong>Large vaults open faster.</strong> Notes load in parallel and in bigger batches, and Lore skips the ones whose files haven't changed since it last read them.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+  <li><strong>Renaming a note can no longer overwrite another note.</strong> If a note's new title collided with a file Lore couldn't see — most often one iCloud hadn't downloaded yet — the next autosave could silently replace that file's contents. Lore now checks the disk itself before renaming and safely backs out if the move fails.</li>
+  <li><strong>Titles that start with a dot no longer make a note vanish.</strong> A title like ".journal" created a hidden file that disappeared from Lore on the next launch; leading dots are now dropped from the filename.</li>
+  <li><strong>Frontmatter written by other apps survives.</strong> Dates in other tools' formats (like <code>created: 2026-06-09</code>) were silently deleted on first save, quoted values grew stray backslashes with every save, and nested metadata under keys Lore doesn't use was flattened or lost. All of it now round-trips untouched.</li>
+  <li><strong>A lone <code>#</code>, <code>-</code>, <code>&gt;</code>, or checkbox no longer styles the line below it.</strong> Typing just a heading, list, quote, or task marker briefly formatted the next line as if it belonged to the marker.</li>
+  <li><strong>Code blocks keep their contents literal.</strong> Links, tables, images, <code>[[wiki links]]</code>, and formatting markers inside ``<code> fences were being styled and partially hidden; they now render as plain code, and formatting markers inside </code>inline code` stay visible too.</li>
+  <li><strong>Renaming a note no longer edits your code samples.</strong> A <code>[[link]]</code> inside a code block or <code>inline code</code> is treated as sample text: a rename leaves it alone, and it no longer counts as a backlink or as an existing link.</li>
+  <li><strong>Bolding across already-bold text no longer scrambles the markers.</strong> A selection that touches part of a bold, struck, or highlighted run now merges everything into one clean span instead of leaving stray <code>**</code> in the text.</li>
+  <li><strong>Japanese and Chinese input no longer floods undo.</strong> Every keystroke of an in-progress composition was recorded as its own undo step and could save half-composed text; the finished word is now one step.</li>
+  <li><strong>Attachment previews update when the file changes.</strong> An image or PDF edited outside Lore — or updated through iCloud — kept showing its old preview until relaunch.</li>
+  <li><strong>Undo on iPad and iPhone is trustworthy again.</strong> Shake-to-undo and the three-finger gestures now share the same history as ⌘Z instead of quietly breaking it, and undoing a formatting command puts the cursor back where it was. Going back to a note also returns you to where you left off instead of the top.</li>
+  <li><strong>A change on another device no longer makes Lore re-read everything.</strong> In some setups Lore couldn't tell which files had actually changed and re-read the whole vault on launch — the main reason opening on iPhone could stall. It now reads only the notes that really changed.</li>
+  <li><strong>Your daily note is recorded as soon as it's created</strong>, so opening Lore again later the same day doesn't go looking for it on iCloud.</li>
+  <li><strong>Formatting a heading no longer breaks it.</strong> Selecting a whole heading line — by dragging across it or with ⌘A — and applying bold, italic, or highlight now wraps the heading's text instead of swallowing the <code>#</code> and destroying the block.</li>
+  <li><strong>Toggling formatting off actually removes it.</strong> Un-bolding or un-striking text whose selection caught the surrounding markers no longer doubles them up, including where styles are nested.</li>
+  <li><strong>Text no longer jumps as you start typing a heading.</strong> The caret is now the right size and in the right place on a heading whose markers have just been hidden, and the first character you type lays out at its final size.</li>
+  <li><strong>Dragging a panel edge works on the first try.</strong> The sidebar and context-panel edge grips no longer lose the click to the text behind them.</li>
+  <li><strong>The context panel opens fully drawn.</strong> Revealing it with ⌘⌥I no longer pops its sections in one after another.</li>
+</ul>
+]]></description>
+            <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore-0.4.2.dmg" length="8202510" type="application/octet-stream" sparkle:edSignature="ytBbJDXS3jUCZvYY1cEAGdjmbKWo6PqgcRT5tB1tJ2uVOOJzKPJV39CyuRnpWyx8Jxxj/dFIYiNYSFKxwBT9Bg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-247.delta" sparkle:deltaFrom="247" length="816894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="vcALyRq3A7KY02xJjqcMfN+EQ6jMmV2JSA9hCxNxhSY+24AhziS2/7i/lQtTaI135U0YXuseUxBH1OXGf5KwCg=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-225.delta" sparkle:deltaFrom="225" length="1077034" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="gjwsIIhcC1AVR+5Wxk3HQXe91/hpf6jTONgi2uVSHHAVX5p5mZbYMCvXwGUH2XmvlIrZdBHA28H9S05SEiciAw=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-193.delta" sparkle:deltaFrom="193" length="1915002" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="31H4ZVWB6Hr51QLEXPK2/XrSay/D02+YWhYlUbvyWI6ZItBJL9enI9XkRI2SUFeHpeatzQRxrjgfclTqZi99Dg=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-178.delta" sparkle:deltaFrom="178" length="2310762" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="o7mXvIzn5iTapqaKVlCzMCz/Zt3tmuenoGJiTZt3A4exLDbDFEvGDCAt6jsldHHXgsq+Fwj4GxR1tmS6t18cBw=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-166.delta" sparkle:deltaFrom="166" length="2308774" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="U5pTGHRLkFg5CmPa3azoHzQMFXdR+KA2ZOz+fBQcq6I1QTgqlUw1DHeX+KPyndfEYdUQ9rZsqrCapNBAp2RZAQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.4.1</title>
             <pubDate>Tue, 21 Jul 2026 11:59:58 -0500</pubDate>
             <sparkle:version>247</sparkle:version>
@@ -57,49 +107,6 @@
                 <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore225-166.delta" sparkle:deltaFrom="166" length="2097374" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mgrFWhlIH+gqyV90GDdkuck8vB4DKMUiTjUlLdR6VVR3G6KR6jYhzm6r7zgT13EfFRjbF3uA/8N48hrwhUvGDQ=="/>
                 <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore225-118.delta" sparkle:deltaFrom="118" length="3100754" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eb+mlHSJInw9iMIsltqttguE603omzuZCh+PgTdfgOJhuA5yTzB8wrSYeS35sCU5rx0gNRZoYSLVuaJ/XWnbCg=="/>
                 <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore225-105.delta" sparkle:deltaFrom="105" length="3103934" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KRaytP5QOVSTwnkQaz8BfJ8PJyB0SQFpZmhQkEEYqfLxpYIZe5ioPAdeE8CadgO0cEGUR09Xk7yyHF0tqgtDBQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.3.0</title>
-            <pubDate>Sun, 12 Jul 2026 09:49:59 -0500</pubDate>
-            <sparkle:version>193</sparkle:version>
-            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<style>body{font:13px/1.5 -apple-system,system-ui,sans-serif;margin:0;color:#1d1d1f}h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#86868b;margin:14px 0 6px}ul{margin:0;padding-left:18px}li{margin:4px 0}code{font-family:ui-monospace,monospace;font-size:12px;background:#f2f2f7;padding:1px 4px;border-radius:4px}</style>
-<h3>Added</h3>
-<ul>
-  <li><strong>Spell check.</strong> Misspelled words are underlined in the editor with corrections on tap/right-click. On by default — turn it off in <strong>Settings → General → Editing</strong>.</li>
-  <li><strong>The <code>/</code> quick-insert menu now works on iPad</strong>, matching Mac: type <code>/</code> at the start of a line for headings, lists, quotes, and links — tap a row (or arrow down and Return with a hardware keyboard) to insert it. Sized compact for iPad's smaller screen.</li>
-</ul>
-<h3>Changed</h3>
-<ul>
-  <li><strong>Atlas is now Fern.</strong> New name, same app — too many markdown apps were called Atlas. Nothing about your notes changes: your vault, folders, Regions, and Trails are exactly where they were. Fern installs as a new app, so point it at your existing vault and re-enter your API keys — the index rebuilds on its own.</li>
-  <li><strong>Return on an indented list item now outdents one level and keeps the list style</strong>, instead of leaving the list entirely. Press Return again once you're back at the base level to drop out of the list.</li>
-  <li><strong>More room around checklist and bullet markers</strong> — the gap between a checkbox or bullet and its text, and the space between list items, both grew for legibility.</li>
-  <li><strong>Trails from ⌘K are no longer capped near 4-5 stops.</strong> A topic you've written about extensively can now trace a much longer path; a narrow one still gets a short, focused list.</li>
-  <li>iPad: tapping a command palette row now selects it first and activates on a second tap — the same Raycast-style model Mac already used — instead of acting on the first tap.</li>
-  <li>iPad: the palette's answer, tensions, loops, and trail cards now cap their height to the room actually available in the window instead of a fixed size, so they can't run off the bottom edge on a smaller iPad.</li>
-  <li>iPad: the View menu no longer lists "Show/Hide Sidebar" twice.</li>
-  <li><strong>The iPad context panel is now a dedicated ⓘ button in the toolbar</strong>, opening Mac's relationships-first layout (tags, outline, links, backlinks, then Nearby Notes) in a popover sized to its content, rather than a card floating over the note. The note's ••• menu no longer lists a redundant "Note Information" entry there — iPhone (which has no ⓘ button) still has it, and it now toggles the info sheet open and closed instead of only opening it.</li>
-  <li><strong>The panel's word/character/reading-time detail (tap the footer line) now opens as a plain attached flyout</strong> — square corners, no speech- bubble arrow — instead of a system popover, so it doesn't nest awkwardly inside iPad's own info popover.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-  <li>iPad: tapping the Done checkmark while editing now also closes the Note Information panel.</li>
-  <li>iPad: the toolbar's Liquid Glass pill no longer reserves an empty gap next to the note's ••• menu — the (invisible) Done checkmark button was still occupying a slot in the shared glass background even at 0 opacity.</li>
-  <li>iPad: the Done checkmark no longer stays stuck on-screen after navigating to All Notes while a note was being edited — leaving a note now ends its edit session.</li>
-  <li>iPad: the Done checkmark now fades away in place instead of animating off-screen when it disappears.</li>
-  <li>iPad: typing <code>#</code> in the command palette with a hardware keyboard attached could jump to a recent note and close the palette instead of opening tag search (a Shift-key mismatch in the 1–5 recent-note shortcut).</li>
-</ul>
-]]></description>
-            <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Fern-0.3.0.dmg" length="7674166" type="application/octet-stream" sparkle:edSignature="s/iWx4MI/Vz27PWUY1XaoJCBuMiaW+z/lslnIU0DHepnfGF1L1VRH6EoSq3YJAYQ145dBGckszDahSkX27cUCg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/fern-releases/main/Fern193-178.delta" sparkle:deltaFrom="178" length="2156898" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="d8nqtG9Y3aSN37dwa7aR63WswFiJ8WOmaL2WF9ftZjnNeNCMBDNgSoqnrJIAh5VFyaEShLfU+K3NhVCgrNVvBg=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/fern-releases/main/Fern193-166.delta" sparkle:deltaFrom="166" length="2153002" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eye+xSSVBcsGkZa6kw2SfSsAfHjcLY0ZFXhI6dH3Jcqm4d2DFUcwOggiIEqol+Vqzwev9pkLrG7OtPxvhNsoDg=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/fern-releases/main/Fern193-118.delta" sparkle:deltaFrom="118" length="3165170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="W9APPDA+xIhXx4cU/3RzFrukMKPzX5EKr7O0XJ8OwEaCzA1FoH7GQ0g5EywoXfuo1GWVuzsQadu7T0WsePCXAQ=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/fern-releases/main/Fern193-105.delta" sparkle:deltaFrom="105" length="3163622" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="J661YwVPnQssZtHNz+kRB+a835lPd1gRnd9ztq6tLrC5ZZ6CYoC//Y2tX0ozcQiwRzu9dgwJk+jb3XNBqv/YCw=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/fern-releases/main/Fern193-87.delta" sparkle:deltaFrom="87" length="3161738" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="lB6lXMVRuhiDE6zWRrLlits1Tnc1y7lyghWkQQyQTFGRdPYrhC2EETyE7gCEyHmkQGeTcRyu53qgg8zy4S+dDg=="/>
             </sparkle:deltas>
         </item>
     </channel>
