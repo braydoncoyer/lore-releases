@@ -1,0 +1,19 @@
+<style>body{font:13px/1.5 -apple-system,system-ui,sans-serif;margin:0;color:#1d1d1f}h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#86868b;margin:14px 0 6px}ul{margin:0;padding-left:18px}li{margin:4px 0}code{font-family:ui-monospace,monospace;font-size:12px;background:#f2f2f7;padding:1px 4px;border-radius:4px}</style>
+<h3>Added</h3>
+<ul>
+  <li><strong>Lore now runs natively on Apple Vision Pro.</strong> The spatial app brings the writing experience, sidebar navigation, All Notes, Nearby Notes, command palette, keyboard commands, and voice dictation into visionOS with platform-native controls.</li>
+  <li><strong>Horizontal rules are available across every editor.</strong> Insert a standard Markdown divider from the slash menu, formatting controls, or menu commands. Lore renders it as a clean visual break while preserving <code>---</code>, <code>***</code>, or <code>___</code> in the Markdown file.</li>
+  <li><strong>The command palette can create today’s daily note.</strong> Search for “today” when its note does not exist and the first result offers to create and open it. Historical and future date searches remain navigation-only.</li>
+  <li><strong>iCloud conflicts are visible and recoverable.</strong> When two devices produce competing versions of a note, Lore now preserves both, lets you choose the version to keep, and can save either version as a separate Markdown note.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+  <li><strong>Notes now use a calmer editorial type system.</strong> Notes pair a New York serif title with system sans-serif body text and section headings, softer body ink, a narrower reading measure, and more deliberate paragraph rhythm. Titles now flow directly into the body without a divider, and the old font-family picker has been retired so every note keeps this hierarchy.</li>
+  <li><strong>Uncreated wiki links are easier to spot.</strong> A <code>[[link]]</code> to a note that does not exist yet uses the normal link blue at reduced opacity. It remains clickable and becomes fully opaque automatically after the note is created.</li>
+  <li><strong>All Notes is now a full library view.</strong> Browse notes as spacious preview cards or a compact list, group them by recency or title, filter by note type or tag, and sort by when they were edited, created, or by title. A new selection mode also supports bulk tagging, pinning, AI controls, and deletion.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+  <li><strong>All Notes stays smooth in larger vaults.</strong> Scrolling now keeps only the necessary cards or rows active, reuses note preview details, and avoids continuous position tracking. Switching between grid and list view also keeps the page anchored instead of jumping. (Mac and iPad)</li>
+  <li><strong>Cross-device edits arrive more reliably while a note stays open.</strong> Lore now reacts to precise iCloud file notifications, keeps changes that arrive during an in-progress refresh, retries notes that have not finished downloading, and safely restarts sync monitoring when iPhone or iPad returns to the foreground. Coordinated file work remains off the main thread so syncing does not interrupt typing. (Mac, iPhone, and iPad)</li>
+</ul>

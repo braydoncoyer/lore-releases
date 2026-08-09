@@ -3,6 +3,42 @@
     <channel>
         <title>Atlas</title>
         <item>
+            <title>0.4.4</title>
+            <pubDate>Sun, 09 Aug 2026 14:35:27 -0500</pubDate>
+            <sparkle:version>317</sparkle:version>
+            <sparkle:shortVersionString>0.4.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<style>body{font:13px/1.5 -apple-system,system-ui,sans-serif;margin:0;color:#1d1d1f}h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#86868b;margin:14px 0 6px}ul{margin:0;padding-left:18px}li{margin:4px 0}code{font-family:ui-monospace,monospace;font-size:12px;background:#f2f2f7;padding:1px 4px;border-radius:4px}</style>
+<h3>Added</h3>
+<ul>
+  <li><strong>Lore now runs natively on Apple Vision Pro.</strong> The spatial app brings the writing experience, sidebar navigation, All Notes, Nearby Notes, command palette, keyboard commands, and voice dictation into visionOS with platform-native controls.</li>
+  <li><strong>Horizontal rules are available across every editor.</strong> Insert a standard Markdown divider from the slash menu, formatting controls, or menu commands. Lore renders it as a clean visual break while preserving <code>---</code>, <code>***</code>, or <code>___</code> in the Markdown file.</li>
+  <li><strong>The command palette can create today’s daily note.</strong> Search for “today” when its note does not exist and the first result offers to create and open it. Historical and future date searches remain navigation-only.</li>
+  <li><strong>iCloud conflicts are visible and recoverable.</strong> When two devices produce competing versions of a note, Lore now preserves both, lets you choose the version to keep, and can save either version as a separate Markdown note.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+  <li><strong>Notes now use a calmer editorial type system.</strong> Notes pair a New York serif title with system sans-serif body text and section headings, softer body ink, a narrower reading measure, and more deliberate paragraph rhythm. Titles now flow directly into the body without a divider, and the old font-family picker has been retired so every note keeps this hierarchy.</li>
+  <li><strong>Uncreated wiki links are easier to spot.</strong> A <code>[[link]]</code> to a note that does not exist yet uses the normal link blue at reduced opacity. It remains clickable and becomes fully opaque automatically after the note is created.</li>
+  <li><strong>All Notes is now a full library view.</strong> Browse notes as spacious preview cards or a compact list, group them by recency or title, filter by note type or tag, and sort by when they were edited, created, or by title. A new selection mode also supports bulk tagging, pinning, AI controls, and deletion.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+  <li><strong>All Notes stays smooth in larger vaults.</strong> Scrolling now keeps only the necessary cards or rows active, reuses note preview details, and avoids continuous position tracking. Switching between grid and list view also keeps the page anchored instead of jumping. (Mac and iPad)</li>
+  <li><strong>Cross-device edits arrive more reliably while a note stays open.</strong> Lore now reacts to precise iCloud file notifications, keeps changes that arrive during an in-progress refresh, retries notes that have not finished downloading, and safely restarts sync monitoring when iPhone or iPad returns to the foreground. Coordinated file work remains off the main thread so syncing does not interrupt typing. (Mac, iPhone, and iPad)</li>
+</ul>
+]]></description>
+            <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore-0.4.4.dmg" length="8307368" type="application/octet-stream" sparkle:edSignature="9DGXyZgrCLpPkEDV6EdhO9kg3wTJD9yloOpn0yyXgNwRqGK46sYaKokNklucQaGyP9JJKWbMmWA8geiNQB0IAw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore317-303.delta" sparkle:deltaFrom="303" length="919106" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="u0zg6jVtsRNP0nq7NFjv6wYinXSp5MJiak2HTsu9QlTfzOn0vxpj/0XLPRmnfeRFo9uJzkMGz0KU3RAVYC0BDQ=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore317-294.delta" sparkle:deltaFrom="294" length="998130" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="h1iKXlSo1L7Vty8xgj9U2Gis2h/j+si/VHT7UU8KS+QYSlgLdoDOc2AiSkiu26FTrpu+32JrRQSjz6rJCLmCCQ=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore317-247.delta" sparkle:deltaFrom="247" length="1234726" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="S2YhLYPvZGTGMvTlgMsAYwnFF4gQc+eM0kBCv1b/o8XtWn35SjDAfOtAhWeId96d1GBCuYB1SdP6cRjLixpfCQ=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore317-225.delta" sparkle:deltaFrom="225" length="1418174" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ZPv1Kaj3C9Vg5Y/fwJDJMNxxAKFV7UWsLchDuhMvrvseRdGAibPgSLK6KyQ6bj5xtiFe/hpqPOvwu4dFvWMZDw=="/>
+                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore317-193.delta" sparkle:deltaFrom="193" length="2072714" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YUF+VGsBI6f5VlHYxDiOo0avjtH2/UDI2xvWcOLoVaO92UJ2HywzQelNMRDfGFhIK5ZJpEHSQiDH+0El48MrCg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.4.3</title>
             <pubDate>Sat, 01 Aug 2026 15:06:54 -0500</pubDate>
             <sparkle:version>303</sparkle:version>
@@ -111,41 +147,6 @@
                 <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-193.delta" sparkle:deltaFrom="193" length="1915002" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="31H4ZVWB6Hr51QLEXPK2/XrSay/D02+YWhYlUbvyWI6ZItBJL9enI9XkRI2SUFeHpeatzQRxrjgfclTqZi99Dg=="/>
                 <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-178.delta" sparkle:deltaFrom="178" length="2310762" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="o7mXvIzn5iTapqaKVlCzMCz/Zt3tmuenoGJiTZt3A4exLDbDFEvGDCAt6jsldHHXgsq+Fwj4GxR1tmS6t18cBw=="/>
                 <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore294-166.delta" sparkle:deltaFrom="166" length="2308774" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="U5pTGHRLkFg5CmPa3azoHzQMFXdR+KA2ZOz+fBQcq6I1QTgqlUw1DHeX+KPyndfEYdUQ9rZsqrCapNBAp2RZAQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.4.1</title>
-            <pubDate>Tue, 21 Jul 2026 11:59:58 -0500</pubDate>
-            <sparkle:version>247</sparkle:version>
-            <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<style>body{font:13px/1.5 -apple-system,system-ui,sans-serif;margin:0;color:#1d1d1f}h3{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#86868b;margin:14px 0 6px}ul{margin:0;padding-left:18px}li{margin:4px 0}code{font-family:ui-monospace,monospace;font-size:12px;background:#f2f2f7;padding:1px 4px;border-radius:4px}</style>
-<h3>Added</h3>
-<ul>
-  <li><strong>Rename a tag everywhere.</strong> Right-click any tag in the context panel and choose <strong>Rename Tag…</strong> to change it across your whole vault at once — every <code>#tag</code> in your notes and their frontmatter. Lore previews exactly how many notes will change before you commit, warns when the new name already exists (a merge), and keeps a Region's membership intact if its tag is the one you rename. Undo the whole cascade from the confirmation banner. Works on Mac, iPad, and iPhone.</li>
-  <li><strong>A serif reading voice.</strong> Notes, titles, and the app's chrome are now set in New York — the system serif — for a warmer, more book-like page. Prefer the old look? <strong>Settings → Appearance → Font</strong> switches between Serif, Sans-Serif (Geist), and Mono (Geist Mono).</li>
-  <li><strong>Insert an image or file from the <code>/</code> menu.</strong> Type <code>/</code> in a note and choose <strong>Image or File</strong> to pick files from disk — they're copied into your vault's Attachments folder and embedded right where your cursor was. Works on Mac and iPad.</li>
-  <li><strong>Labs.</strong> A new Settings pane for early experiments, each switchable per-device and off by default.</li>
-  <li><strong>Retelling</strong> (Labs, Mac). Now and then, Lore notices a thread of linked notes that has gone quiet and offers to walk you back through it — a short, focused re-read, one note at a time, ending with a single question whose answer becomes a new note linked into the thread. The invitation appears in the sidebar and in ⌘K only when a thread is ripe. Turn it on in <strong>Settings → Labs</strong>.</li>
-</ul>
-<h3>Changed</h3>
-<ul>
-  <li>The writing surface is a touch warmer in light mode, and the editor column is slightly wider.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-  <li><strong>Formatting a multi-paragraph selection now works.</strong> Bold, italic, highlight, strikethrough, and code applied across several paragraphs or list items now format each line correctly — matching how other editors handle it — instead of leaving stray markers, and a single undo reverts the whole thing. List bullets, checkboxes, and other line markers are left untouched.</li>
-  <li><strong>Renaming a Region keeps its notes.</strong> Retitling a Region — by editing its heading, or renaming its file in Finder or iCloud — no longer quietly detaches the notes filed under it. A Region now remembers the tag it collects, so its members (and any you add later) stay put.</li>
-</ul>
-]]></description>
-            <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore-0.4.1.dmg" length="8049179" type="application/octet-stream" sparkle:edSignature="Wvh0FNEM0//78mcNZvjOygjUKQhlNN9r9lYIuWraPvwFekDSlWSVSNkk7T4U+jZARJo6EmifKTr70Wiz2CPLAQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore247-225.delta" sparkle:deltaFrom="225" length="803990" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qy4IPNdJcG+i1E7I1ce2fkudaJtBVsuM2ICqspSsccjSCAGCJ/ryXj2rtWwZTdSDUIJzs28t3hP1jLnrRDtGDw=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore247-193.delta" sparkle:deltaFrom="193" length="1817934" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dTqbI9pciGOmlQqnutsBumEOXTf7/Nh+80xt0QUIdPkSE3ik17rjyFh+1x0uKy/EdY4iYbvTCxv0PzF3QUU/Aw=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore247-178.delta" sparkle:deltaFrom="178" length="2216614" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="anE0g603oCBx9er5ThyEh/LOjJRDhJVrMAN2A4tXTlaehavDkq304N+EvVhrgp2m+5oWKRIg2UuVDCtk8xWACw=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore247-166.delta" sparkle:deltaFrom="166" length="2218978" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ZeMQ+T+9CXxPJrLm82m+0phsy5jU2HiAPF8MZbwn16kIMDgT2Ui0j+9zwpVjneozw4Xmqo8pXlKK8Gmc80DPBA=="/>
-                <enclosure url="https://raw.githubusercontent.com/braydoncoyer/lore-releases/main/Lore247-118.delta" sparkle:deltaFrom="118" length="3225914" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ik6e0dFPjqpggyHIa29C38gubF+gVrFep5Kw9qTOJQTnB1jPGxMItTCZO78fB/59sqmow2PpfdDx7bIXcRvDCw=="/>
             </sparkle:deltas>
         </item>
     </channel>
